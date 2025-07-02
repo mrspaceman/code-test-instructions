@@ -15,10 +15,7 @@ import java.util.Objects;
  */
 @Entity
 @Table(name = "url_mappings")
-@Getter
-@Setter
-@ToString
-@RequiredArgsConstructor
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class UrlMapping {
