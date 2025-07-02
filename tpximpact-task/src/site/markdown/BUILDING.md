@@ -4,13 +4,13 @@
 
 to build this application from the command line you can use the following command from the root directory of the
 project.
-This command will compile both sub-modules, `tpximpact-task` and `tpximpact-ui`, and ensure that all dependencies are
+This command will compile both submodules, `tpximpact-task` and `tpximpact-ui`, and ensure that all dependencies are
 resolved.
 ```shell
 mvn clean compile
 ```
 
-the following commands show how to build the individual sub-modules, `tpximpact-task` and `tpximpact-ui`, if you want to
+the following commands show how to build the individual submodules, `tpximpact-task` and `tpximpact-ui`, if you want to
 build them separately.
 ```shell
 mvn --projects tpximpact-task --also-make clean compile

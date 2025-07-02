@@ -15,7 +15,6 @@ import uk.co.droidinactu.tpximpacttask.urlshortener.dto.ShortenUrlResponse;
 import uk.co.droidinactu.tpximpacttask.urlshortener.service.UrlShortenerService;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
 @SpringBootTest

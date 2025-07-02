@@ -64,7 +64,7 @@ public class TpsimpactuiApplication implements CommandLineRunner {
         String alias = input.nextLine();
 
         try {
-            Map<String, String> params = new HashMap<String, String>();
+            Map<String, String> params = new HashMap<>();
             getRestTemplate().delete(SHORTEN_URL_HOST + SHORTEN_URL_ENDPOINT_DELETE + alias, params);
             System.out.println("Shortened URL " + alias + " deleted");
         } catch (Exception e) {
@@ -80,6 +80,7 @@ public class TpsimpactuiApplication implements CommandLineRunner {
                             url,
                             UrlMapping[].class);
             UrlMapping[] urls = response.getBody();
+            assert urls != null;
             Arrays.stream(urls).toList().forEach(urlMapping -> {
                 System.out.println(
                         "Alias: [" + urlMapping.getAlias()
@@ -134,6 +135,7 @@ public class TpsimpactuiApplication implements CommandLineRunner {
         try {
             HttpEntity<ShortenUrlRequest> packetEntity = new HttpEntity<>(shortenUrlRequest, getHeaders());
             ResponseEntity<ShortenUrlResponse> result = getRestTemplate().exchange(url, HttpMethod.POST, packetEntity, ShortenUrlResponse.class);
+            assert result.getBody() != null;
             System.out.println("Shortened URL response: " + result.getBody().getShortUrl());
         } catch (Exception e) {
             System.out.println("There was an error shortening your URL: " + fullUrl);
@@ -168,7 +170,7 @@ public class TpsimpactuiApplication implements CommandLineRunner {
 
     private HttpHeaders getHeaders() {
         HttpHeaders headers = new HttpHeaders();
-        headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+        headers.setAccept(List.of(MediaType.APPLICATION_JSON));
         headers.setContentType(MediaType.APPLICATION_JSON);
         return headers;
     }
