@@ -47,7 +47,7 @@ public class UrlMapping {
      * true indicates that this shortened url was created using a user supplied custom string.
      */
     @Column(nullable = false)
-    private Boolean isCusomised = false;
+    private Boolean isCustomised = false;
 
     /**
      * The date and time when the URL mapping was created.
