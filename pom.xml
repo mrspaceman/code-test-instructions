@@ -19,6 +19,7 @@
     <modules>
         <module>tpximpact-task</module>
         <module>tpximpact-ui</module>
+        <module>tpximpact-ui-angular</module>
     </modules>
 
     <developers>

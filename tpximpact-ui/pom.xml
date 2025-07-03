@@ -11,9 +11,9 @@
     <groupId>uk.co.droidinactu</groupId>
     <artifactId>tpsimpact-ui</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>tpsimpactui</name>
+    <name>tpximpactui</name>
 
-    <description>tpsimpactui</description>  
+    <description>tpximpact task cli</description>
     
     <dependencies>
         <dependency>
